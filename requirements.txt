@@ -1,0 +1,10 @@
+python-Levenshtein==0.12.2
+thefuzz==0.19.0
+beautifulsoup4
+requests
+markupsafe==2.0.1
+Flask
+flask-bootstrap
+pytz
+nltk
+pyyaml

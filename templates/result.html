@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %}Search Result{% endblock %} {% block
+content %}
+<div style="margin-top: 40px">
+  <div class="container">
+    <div class="row">{% include "search.html" %}</div>
+  </div>
+
+  <script src="/static/js/main.js?v=1.0.3"></script>
+
+  <script>
+    var data = eval('[' + {{ json_data| tojson }} +']');
+    var delete_items = [];
+    // console.log(data);
+    $(document).ready(function(){
+      update_result(data);
+    });
+  </script>
+
+  <div class="container">
+    <div class="list-group" id="result-list-group"></div>
+  </div>
+</div>
+{% endblock %}
